@@ -1,0 +1,52 @@
+@use "../abstracts/_variables";
+@use "../abstracts/mixins";
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; // Espaciado entre las columnas
+    padding: 1rem;
+}
+
+// Definir las columnas
+.grid-column {
+    flex: 1 1 calc(33.33% - 20px); // Tres columnas de igual tamaño
+    box-sizing: border-box;
+
+    // Hacer que las columnas se apilen en pantallas pequeñas
+    @media (max-width: 768px) {
+        flex: 1 1 100%; // Las columnas toman el 100% del ancho en dispositivos pequeños
+    }
+}
+
+// Para servicios, testimonial, o cualquier sección con una estructura de columnas
+.services-section__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .services-section__card {
+        flex: 1 1 calc(33.33% - 20px);
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            flex: 1 1 100%; // Los cards toman el 100% del ancho en pantallas más pequeñas
+        }
+    }
+}
+
+.reviews-section__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .reviews-section__card {
+        flex: 1 1 calc(25% - 20px); // Cuatro columnas en una fila
+        box-sizing: border-box;
+
+        @media (max-width: 768px) {
+            flex: 1 1 100%; // Los cards toman el 100% del ancho en pantallas más pequeñas
+        }
+    }
+}

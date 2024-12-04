@@ -1,0 +1,65 @@
+@use "../vendors/bootstrap/bootstrap.css";
+@use "../abstracts/mixins";
+@use "../abstracts/_variables";
+
+// se pausa
+/*
+$primary-color: aquamarine;
+
+section {
+    .container {
+        background-color: $primary-color;
+        @include mixins.border-radius(10px);
+    }
+}
+*/
+
+// Estilos actuales de base
+body {
+    font-family: variables.$font-family;
+    background-color: variables.$background-color;
+    color: variables.$text-color;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: variables.$primary-color;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: variables.$text-color;
+}
+
+a {
+    color: variables.$link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: variables.$link-hover-color;
+        text-decoration: underline;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+button, .btn {
+    font-family: variables.$font-family;
+    background-color: variables.$primary-color;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: variables.$link-hover-color;
+    }
+}

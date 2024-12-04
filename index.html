@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Inicio</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="styles/vendors/bootstrap/bootstrap.css" rel="stylesheet">
+    <script src="js/jquery/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+</head>
+
+<body onload="showServices()">
+    <!-- Barra de navegación-->
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="nav__logo" src="img/Divem---Isologo.png" /></a>
+                <div class="collapse navbar-collapse show" id="navbarBasic">
+                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                        <li class="nav-item nav__item">
+                            <a class="nav-link active" aria-current="page" href="index.html"
+                                onclick='log("Inicio")'>Inicio</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link" href="team.html" onclick='log("Equipo")'>Equipo</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link" href="contact.html" onclick='log("Contacto")'>Contacto</a>
+                        </li>
+                        <li class="nav-item nav__item nav__reserve">
+                            <a id="nav__reserve--text" class="nav-link" href="#" onclick='reservePrompt()'>Reservar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="welcome-section">
+        <h1 class="welcome-section__title">Bienvenidos al Hospital Base San José Osorno</h1>
+
+        <div class="container">
+            Contamos con un equpo médico de excelencia e instalaciones de vanguardia para garantizar que nuestros
+            clientes cuenten con la mejor atención.
+        </div>
+    </section>
+
+    <details>
+        <summary>Operaciones JSON</summary>
+        <button onclick="fetchDoctores()">Fetch</button>
+        <button onclick="clone(doctores)">Clonación</button>
+        <button onclick="merge(doctores, servicios)">Merge</button>
+        <button onclick="parse(doctores)">Recorrido y stringify</button>
+        <button onclick="patientArrived()">Evento llegada paciente</button>
+        <button onclick="calculateWaitTimes()">Calcular tiempo de espera promedio</button>
+        <button onclick="calculateTotalPatientCost()">Calcular costo total horas paciente</button>
+
+        <button onclick="sortDoctorsByExperience()">Ordenar doctores</button>
+        <h5>Encontrar doctor: </h5>
+        <input type="text" class="form-control" id="usr" onchange="findDoctor(this.value)">
+    </details>
+
+    <section class="services-section">
+        <h2 class="services-section__title">Nuestros Servicios</h2>
+
+        <div class="container services-section__grid" id="listaServicios"></div>
+    </section>
+
+    <section class="reviews-section">
+        <h2 class="welcome-section__title">Nuestros clientes opinan</h2>
+
+        <div class="container reviews-section__grid">
+            <div class="reviews-section__card">
+                <blockquote class="blockquote">
+                    "Me atendieron muy bien."
+                </blockquote>
+                <p>Jaime, 32</p>
+            </div>
+
+            <div class="reviews-section__card">
+                <blockquote class="blockquote">
+                    "Los profesionales son excelentes."
+                </blockquote>
+                <p>Mariana, 45</p>
+            </div>
+
+            <div class="reviews-section__card">
+                <blockquote class="blockquote">
+                    "Buena atención al precio justo."
+                </blockquote>
+                <p>Lorenzo, 37</p>
+            </div>
+
+            <div class="reviews-section__card">
+                <blockquote class="blockquote">
+                    "Siempre tienen todos mis remedios."
+                </blockquote>
+                <p>Ilse, 64</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer text-center py-3 mt-auto">
+        <div class="footer__container container-fluid">
+            <p class="footer__contact text-white">Mesa Central: 64 2 336200 | Email para información general:
+                informacioneshbo@redsalud.gov.cl</p>
+            <p class="footer__address text-white">Dirección: Avda Dr. Guillermo Bühler 1765 Osorno</p>
+            <div class="footer__social mt-2">
+                <a href="https://web.facebook.com/HBSJO/?_rdc=1&_rdr" class="footer__link text-light me-3">Facebook</a>
+                <a href="https://t.me/HospitalBaseOsorno" class="footer__link text-light me-3">Telegram</a>
+                <a href="https://www.youtube.com/channel/UCv9q1cv0JYM4kvbteRpcbQQ"
+                    class="footer__link text-light">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

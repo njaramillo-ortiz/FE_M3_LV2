@@ -1,0 +1,93 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.team-section {
+    padding: 2rem;
+    background-color: variables.$background-color; // Fondo claro para la sección
+
+    &__title {
+        text-align: center;
+        color: variables.$primary-color; // Color principal para el título
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        text-align: center;
+        font-size: 1.1rem;
+        color: variables.$text-color;
+        margin-bottom: 2rem;
+    }
+
+    &__members {
+        display: flex;
+        justify-content: space-between;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        background-color: #fff;
+        border: none;
+        @include mixins.border-radius(10px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        width: calc(25% - 1.5rem);
+        max-width: 280px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+            transform: translateY(-2px); // hover
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        &-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            margin-bottom: 1rem;
+        }
+
+        &-title {
+            font-size: 1.5rem;
+            color: variables.$secondary-color; // Color secundario para el nombre del doctor
+            margin-bottom: 0.5rem;
+        }
+
+        &-specialty {
+            font-size: 1.1rem;
+            color: variables.$text-color; // Color de texto principal
+        }
+
+        &-description {
+            font-size: 1rem;
+            color: variables.$text-muted-color; // Color de texto secundario
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .team-section {
+        padding: 1rem;
+
+        &__card {
+            width: 100%;
+            padding: 1rem;
+        }
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__card-title,
+        &__card-specialty,
+        &__card-description {
+            font-size: 0.85rem;
+        }
+    }
+
+}

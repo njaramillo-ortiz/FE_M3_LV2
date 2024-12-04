@@ -1,0 +1,36 @@
+@use '../abstracts/variables';
+
+.footer {
+    background-color: variables.$dark-color;
+    color: variables.$text-light-color;
+    padding: 1.5rem 0;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    &__contact,
+    &__address {
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+        color: #ffffff;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    &__link {
+        color: variables.$text-light-color;
+        text-decoration: none;
+        font-size: 1rem;
+
+        &:hover {
+            color: variables.$primary-color; 
+            text-decoration: underline;
+        }
+    }
+}

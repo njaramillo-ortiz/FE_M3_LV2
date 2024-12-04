@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital - Contacto</title>
+    <meta name="author" content="Hospital - contacto">
+    <meta name="description" content="página de contacto del hospital">
+    <meta name="keywords"
+        class="hospital, pagina de contacto, atencion de urgencia, atencion medica, cirugias, atencion general">
+
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="styles/vendors/bootstrap/bootstrap.css">
+
+</head>
+
+<body>
+    <!---------------------------------------------NAVBAR----------------------------------------->
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="nav__logo" src="img/Divem---Isologo.png" /></a>
+                <div class="collapse navbar-collapse show" id="navbarBasic">
+                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                        <li class="nav-item nav__item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link" href="team.html">Equipo</a>
+                        </li>
+                        <li class="nav-item nav__item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                        <li class="nav-item nav__item nav__reserve">
+                            <a id="nav__reserve--text" class="nav-link" href="#">Reservar</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------------------------------------------HERO----------------------------------------------->
+    <main class="hero">
+        <section class="hero__principal">
+            <h1 class="hero__title">Atención 24/7</h1>
+        </section>
+    </main>
+
+    <!-------------------------------------------------FORMULARIO---------------------------------------->
+
+    <section id="formulario" class="Cotizacion m-5">
+
+        <div class="container_form">
+            <div class="row">
+                <div class="col-md-12 pt-5">
+                    <h2 class="formulario__title text-center">Haz tu reserva</h2>
+
+                    <form id="form_datos" name="contacto">
+                        <div class="form-group col-md-12 m-3">
+                            <label for="nombre">Nombre</label>
+                            <input id="name" type="text" class="form-control" name="name"
+                                placeholder="Ingrese su nombre" required maxlength="45">
+                        </div>
+
+                        <div class="form-group col-md-12 m-3">
+                            <label for="correo">Email</label>
+                            <input type="email" class="form-control" id="correo" name="correo" required
+                                placeholder="name@example.com"
+                                pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+                        </div>
+
+                        <div class="form-group col-md-12 m-3">
+                            <button type="submit" class="btn btn-outline-secondary btn-block">Enviar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------------------------------UBICACION---------------------------------->
+
+    <div class="mapa">
+        <h2 class="mapa__title text-uppercase text-center m-5">ubicanos</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13313.61949518912!2d-70.66170711284177!3d-33.464808299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c56a8a81d0e1%3A0xe02043e7956186ff!2sCl%C3%ADnica%20Santa%20Rosa!5e0!3m2!1ses-419!2scl!4v1729526514135!5m2!1ses-419!2scl"
+            width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" class="m-5"></iframe>
+    </div>
+
+    <!-------------------------------------------------------FOOTER----------------------------------->
+
+    <footer class="footer text-center py-3 mt-auto">
+        <div class="footer__container container-fluid">
+            <p class="footer__contact text-white">Mesa Central: 64 2 336200 | Email para información general:
+                informacioneshbo@redsalud.gov.cl</p>
+            <p class="footer__address text-white">Dirección: Avda Dr. Guillermo Bühler 1765 Osorno</p>
+            <div class="footer__social mt-2">
+                <a href="https://web.facebook.com/HBSJO/?_rdc=1&_rdr" class="footer__link text-light me-3">
+                    <img src="img/facebook.svg" alt=""></a>
+                <a href="https://t.me/HospitalBaseOsorno" class="footer__link text-light me-3">Telegram</a>
+                <a href="https://www.youtube.com/channel/UCv9q1cv0JYM4kvbteRpcbQQ"
+                    class="footer__link text-light">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="js/jquery/jquery-3.6.0.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script>
+        const form = document.getElementById("form_datos");
+
+        form.addEventListener("submit", (e) => 
+        {
+            e.preventDefault();
+            alert("Reserva realizada!");
+        });
+    </script>
+</body>
+
+</html>

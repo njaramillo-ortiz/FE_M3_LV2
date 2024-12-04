@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Dr. Juan Perez",
+        "area": "Cirugía",
+        "description": "El Dr. Juan Pérez cuenta con más de 20 años de experiencia en cardiología.",
+        "yearsExp": 50,
+        "schedule": 
+        {
+            "startTime": "10:00",
+            "endTime": "12:00"
+        },
+        "contact":
+        {
+            "email": "jperez@hbv.cl",
+            "phone": "999999999"
+        }
+    },
+    {
+        "name": "Dra. Maria Lopez",
+        "area": "Oftalmología",
+        "description": "La Dra. María López es reconocida por su trabajo en consultas generales.",
+        "yearsExp": 33,
+        "schedule": 
+        {
+            "startTime": "08:30",
+            "endTime": "17:30"
+        },
+        "contact":
+        {
+            "email": "mlopez@hbv.cl",
+            "phone": "988888888"
+        }
+    },
+    {
+        "name": "Dr. Carlos Martinez",
+        "area": "Psicología",
+        "description": "El Dr. Carlos Martínez se especializa en atención hospitalaria.",
+        "yearsExp": 50,
+        "schedule": 
+        {
+            "startTime": "09:45",
+            "endTime": "10:15"
+        },
+        "contact":
+        {
+            "email": "cmartinez@hbv.cl",
+            "phone": "977777777"
+        }
+    },
+    {
+        "name": "Dra. Elena Garcia",
+        "area": "Kinesiología",
+        "description": "Habitaciones confortables para tu recuperación.",
+        "yearsExp": 50,
+        "schedule": 
+        {
+            "startTime": "11:11",
+            "endTime": "20:20"
+        },
+        "contact":
+        {
+            "email": "egarcia@hbv.cl",
+            "phone": "966666666"
+        }
+    }
+]

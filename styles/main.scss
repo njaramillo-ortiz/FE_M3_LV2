@@ -1,0 +1,17 @@
+// Variables y mixins
+@use 'abstracts/mixins';
+@use 'abstracts/variables';
+
+// Base
+@use 'base/base';
+
+// Encabezado, pie de página, navegación
+@use 'layout/header';
+@use 'layout/footer';
+@use 'layout/grid';
+@use 'layout/navigation';
+
+// Páginas
+@use 'pages/contact';
+@use 'pages/home';
+@use 'pages/team';
